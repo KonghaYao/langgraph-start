@@ -1,0 +1,31 @@
+{
+    "name": "@langgraph-js/create-agent",
+    "description": "template of langgraph agent start",
+    "version": "0.0.0",
+    "author": "KongHaYao <3446798488@qq.com>",
+    "scripts": {
+        "build": "tsup src/cli.ts --minify",
+        "clean": "shx rm -rf lib",
+        "dev": "tsup src/cli.ts --watch",
+        "prepublishOnly": "npm run clean && npm run build"
+    },
+    "bin": "dist/cli.js",
+    "files": [
+        "dist",
+        "templates"
+    ],
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "tsup": "^8",
+        "typescript": "^5"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "create-create-app": "^7.3.0"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "esbuild"
+        ]
+    }
+}
